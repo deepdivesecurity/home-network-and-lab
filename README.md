@@ -9,7 +9,7 @@ This repo contains detailed information about my technical projects, including c
 5. [Smart Home Automation](#smart-home-automation)
 
 ## Introduction
-This repo showcases my integrated home network, lab, security, and automation setup. This is meant to document my network for personal use, highlight my technical expertise across various domains, and represent my dedication to continued learning. The various domains covered are: 
+This repo showcases my integrated home network, lab, security, and automation setup. This is meant to document my network for personal use, highlight my technical expertise across various domains, and represent my dedication to continued learning. The various domains covered are:
 1. Network Architecture: Designed for high performance and security with segmented VLANs, custom firewall rules, and automated VLAN device assignment
 2. Home Lab Architecture: A versatile lab environment featuring a server with Proxmox VE virtualization, extensive NAS storage, and diverse network configurations for technical projects and experimentation
 3. Security Cameras & Network Video Recorder (NVR): A security system integrated with multiple IP cameras feeding a centralized NVR over RTSP for comprehensive monitoring and secure access without internet exposure
@@ -46,7 +46,7 @@ Table 1. <br />
 | VLAN50: Home Lab  | Semi-trusted zone  | Mini-PC servers; network attached storage (NAS); etc. | --- |
 
 ### WiFi
-At the time of this push, there are 2 WiFi SSIDs as follows: 
+At the time of this push, there are 2 WiFi SSIDs as follows:
 - Main network
   - Secured w/ WPA-2 to allow for the use of private pre-shared keys (PPSKs) [(M1041)](https://attack.mitre.org/mitigations/M1041/)
   - Uses PPSKs to connect devices to their applicable VLAN (not including VLAN20: Guest devices)
@@ -145,7 +145,7 @@ The value of my home lab is that it creates an environment for me to conduct pra
   - Upgraded RAM
 - 1..n HP EliteDesk Mini PCs
   - 1 Running Proxmox VE
- 
+
 ### Synology NAS Configuration
 #### IAM
 - Default admin account disabled
@@ -243,10 +243,10 @@ Protocol: All <br />
 Source IP: All <br />
 Action: Deny <br />
 </details>
- 
+
 ## Security Cameras and NVR
 ### Value Proposition
-Enabling my IP cameras to feed into my NVR offers various personal value benefits including but not limited to: 
+Enabling my IP cameras to feed into my NVR offers various personal value benefits including but not limited to:
 - Improved security: By sending my IP camera feeds to my NVR over my LAN, I'm able to disable internet connectivity for my IP cameras
 - Continuous recording: Without an NVR, my IP cameras lose their recordings in the event of an internet outage
 - Reduced network load: IP camera feeds would be processed locally, reducing bandwidth load on the network
@@ -277,7 +277,7 @@ At the time of this push, all devices are integrated with Google Home for centra
 ### Automations
 <details>
   <summary>Turn AC On Morning Routine</summary>
-  
+
   - Starter: In the morning at a specific time
   - Action(s):
     - Turn AC on for 30min
@@ -285,7 +285,7 @@ At the time of this push, all devices are integrated with Google Home for centra
 
 <details>
   <summary>Morning Routine</summary>
-  
+
   - Starter: In the morning at a specific time
   - Action(s):
     - Adjust smart hub media volume;
@@ -300,12 +300,12 @@ At the time of this push, all devices are integrated with Google Home for centra
 
   - Starter: Every 3rd day of the week at a specific time
   - Action(s):
-    - Run full robot vacuum cycle 
+    - Run full robot vacuum cycle
 </details>
 
 <details>
   <summary>Where are the Utensils? Routine</summary>
-  
+
   - Starter: When someone asks where are the utensils
   - Action(s):
     - Announce to household where the utensils are located
@@ -313,7 +313,7 @@ At the time of this push, all devices are integrated with Google Home for centra
 
 <details>
   <summary>Where is the Garbage and/or Recyclables Routine</summary>
-  
+
   - Starter: When someone asks where the garbage, where the recyclables, or a combination of the two
   - Action(s):
     - Announce to the household where the garbage and recyclables are
