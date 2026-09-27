@@ -9,7 +9,11 @@ repos:
     hooks:
       - id: terraform_fmt
         files: ^ubiquiti/.*\.(tf|tfvars)$
-      - id: terraform_docs
+      - id: terraform_tflint
+        files: ^ubiquiti/.*\.(tf|tfvars)$
+      - id: terraform_trivy
         files: ^ubiquiti/.*\.(tf|tfvars)$
       - id: terraform_checkov
+        files: ^ubiquiti/.*\.(tf|tfvars)$
+      - id: terraform_docs
         files: ^ubiquiti/.*\.(tf|tfvars)$
