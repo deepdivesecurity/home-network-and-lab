@@ -1,0 +1,6 @@
+[tools]
+checkov = "latest"
+pre-commit = "latest"
+terraform-docs = "latest"
+tflint = "latest"
+trivy = "latest"
