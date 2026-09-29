@@ -23,5 +23,3 @@ repos:
           - --hook-config=--path-to-file=UBIQUITI_DOCS.md
           - --hook-config=--add-to-existing-file=true
           - --hook-config=--create-file-if-not-exist=true
-          - --hook-config=--use-standard-markers=true
-          - --hook-config=--custom-doc-header="# "
