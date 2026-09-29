@@ -1,4 +1,4 @@
-resource "unifi_network" "vlan" {
+resource "unifi_network" "guest_vlan" {
   name   = "Guests"
   subnet = "192.168.20.0/24"
   vlan   = 20
@@ -13,7 +13,7 @@ resource "unifi_network" "vlan" {
   internet_access = true
 }
 
-resource "unifi_network" "vlan" {
+resource "unifi_network" "iot_vlan" {
   name   = "IoT"
   subnet = "192.168.30.0/24"
   vlan   = 30
@@ -29,7 +29,7 @@ resource "unifi_network" "vlan" {
   network_isolation = true
 }
 
-resource "unifi_network" "vlan" {
+resource "unifi_network" "cameras_vlan" {
   name   = "Cameras"
   subnet = "192.168.40.0/24"
   vlan   = 40
@@ -45,7 +45,7 @@ resource "unifi_network" "vlan" {
   network_isolation = true
 }
 
-resource "unifi_network" "vlan" {
+resource "unifi_network" "home_lab_vlan" {
   name   = "Home Lab"
   subnet = "192.168.50.0/24"
   vlan   = 50
