@@ -19,4 +19,3 @@ repos:
         files: ^ubiquiti/.*\.(tf|tfvars)$
       - id: terraform_docs
         files: ^ubiquiti/.*\.(tf|tfvars)$
-        args: ["markdown", "table", "--output-file", "README.md", "./"]
