@@ -318,7 +318,3 @@ At the time of this push, all devices are integrated with Google Home for centra
   - Action(s):
     - Announce to the household where the garbage and recyclables are
 </details>
-
-<!-- BEGIN_TF_DOCS -->
-
-<!-- END_TF_DOCS -->
