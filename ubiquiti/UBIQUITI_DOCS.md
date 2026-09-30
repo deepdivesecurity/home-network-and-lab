@@ -26,7 +26,7 @@ No modules.
 | [unifi_network.guest_vlan](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/network) | resource |
 | [unifi_network.home_lab_vlan](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/network) | resource |
 | [unifi_network.iot_vlan](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/network) | resource |
-| [unifi_setting.mgmt_only](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/setting) | resource |
+| [unifi_setting.combined](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/setting) | resource |
 
 ## Inputs
 
