@@ -20,4 +20,8 @@ resource "unifi_setting" "combined" {
 
     ips_mode = "ips"
   }
+
+  doh = {
+    state = "auto"
+  }
 }
