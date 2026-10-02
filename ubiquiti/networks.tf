@@ -1,3 +1,12 @@
+data "unifi_client_qos_rate" "default" {
+  name = "Default"
+}
+
+# ==============================================================================
+# VLANs
+# ==============================================================================
+# The following resources provision the VLANs for the network.
+
 resource "unifi_network" "guest_vlan" {
   name   = "Guests"
   subnet = "192.168.20.0/24"
@@ -59,4 +68,26 @@ resource "unifi_network" "home_lab_vlan" {
   purpose           = "vlan-only"
   internet_access   = true
   network_isolation = false
+}
+
+# ==============================================================================
+# WiFi
+# ==============================================================================
+# The following resources provision the WiFi networks.
+
+resource "unifi_wlan" "guest" {
+  name       = var.guest_wifi_ssid
+  passphrase = var.guest_wifi_password
+  security   = "wpapsk"
+
+  # enable WPA2/WPA3 support
+  wpa3_support    = true
+  wpa3_transition = true
+  pmf_mode        = "optional"
+
+  is_guest = true
+  enabled  = true
+
+  network_id    = unifi_network.guest_vlan.id
+  user_group_id = data.unifi_client_qos_rate.default.id
 }
