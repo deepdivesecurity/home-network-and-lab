@@ -35,6 +35,7 @@ No modules.
 | [unifi_setting.combined](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/setting) | resource |
 | [unifi_wlan.guest](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/wlan) | resource |
 | [unifi_wlan.iot](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/wlan) | resource |
+| [unifi_wlan.main](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/resources/wlan) | resource |
 | [unifi_client_qos_rate.default](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/data-sources/client_qos_rate) | data source |
 | [unifi_network.default](https://registry.terraform.io/providers/ubiquiti-community/unifi/latest/docs/data-sources/network) | data source |
 
@@ -49,6 +50,8 @@ No modules.
 | <a name="input_guest_wifi_ssid"></a> [guest\_wifi\_ssid](#input\_guest\_wifi\_ssid) | SSID for the guest WiFi network | `string` | n/a | yes |
 | <a name="input_iot_wifi_password"></a> [iot\_wifi\_password](#input\_iot\_wifi\_password) | Password for the IoT WiFi network | `string` | n/a | yes |
 | <a name="input_iot_wifi_ssid"></a> [iot\_wifi\_ssid](#input\_iot\_wifi\_ssid) | SSID for the IoT WiFi network | `string` | n/a | yes |
+| <a name="input_main_wifi_password"></a> [main\_wifi\_password](#input\_main\_wifi\_password) | Password for the main WiFi network | `string` | n/a | yes |
+| <a name="input_main_wifi_ssid"></a> [main\_wifi\_ssid](#input\_main\_wifi\_ssid) | SSID for the main WiFi network | `string` | n/a | yes |
 
 ## Outputs
 

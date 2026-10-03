@@ -87,6 +87,22 @@ resource "unifi_network" "home_lab_vlan" {
 # ==============================================================================
 # The following resources provision the WiFi networks.
 
+resource "unifi_wlan" "main" {
+  name       = var.main_wifi_ssid
+  passphrase = var.main_wifi_password
+  security   = "wpapsk"
+
+  # enable WPA2/WPA3 support
+  wpa3_support    = true
+  wpa3_transition = true
+  pmf_mode        = "optional"
+
+  enabled = true
+
+  network_id    = unifi_network.default_vlan.id
+  user_group_id = data.unifi_client_qos_rate.default.id
+}
+
 resource "unifi_wlan" "guest" {
   name       = var.guest_wifi_ssid
   passphrase = var.guest_wifi_password

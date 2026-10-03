@@ -14,16 +14,16 @@ variable "allow_insecure" {
   type        = bool
 }
 
-# variable "main_wifi_ssid" {
-#   description = "SSID for the main WiFi network"
-#   type        = string
-# }
+variable "main_wifi_ssid" {
+  description = "SSID for the main WiFi network"
+  type        = string
+}
 
-# variable "main_wifi_password" {
-#   description = "Password for the main WiFi network"
-#   type        = string
-#   sensitive   = true
-# }
+variable "main_wifi_password" {
+  description = "Password for the main WiFi network"
+  type        = string
+  sensitive   = true
+}
 
 variable "guest_wifi_ssid" {
   description = "SSID for the guest WiFi network"
