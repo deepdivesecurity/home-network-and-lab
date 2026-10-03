@@ -36,13 +36,13 @@ variable "guest_wifi_password" {
   sensitive   = true
 }
 
-# variable "iot_wifi_ssid" {
-#   description = "SSID for the IoT WiFi network"
-#   type        = string
-# }
+variable "iot_wifi_ssid" {
+  description = "SSID for the IoT WiFi network"
+  type        = string
+}
 
-# variable "iot_wifi_password" {
-#   description = "Password for the IoT WiFi network"
-#   type        = string
-#   sensitive   = true
-# }
+variable "iot_wifi_password" {
+  description = "Password for the IoT WiFi network"
+  type        = string
+  sensitive   = true
+}

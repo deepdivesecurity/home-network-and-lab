@@ -7,6 +7,18 @@ data "unifi_client_qos_rate" "default" {
 # ==============================================================================
 # The following resources provision the VLANs for the network.
 
+resource "unifi_network" "default_vlan" {
+  name   = "Default"
+  subnet = "192.168.1.0/24"
+  vlan   = 1
+
+  dhcp_server = {
+    enabled = true
+    start   = "192.168.1.6"
+    stop    = "192.168.1.254"
+  }
+}
+
 resource "unifi_network" "guest_vlan" {
   name   = "Guests"
   subnet = "192.168.20.0/24"
@@ -89,5 +101,17 @@ resource "unifi_wlan" "guest" {
   enabled  = true
 
   network_id    = unifi_network.guest_vlan.id
+  user_group_id = data.unifi_client_qos_rate.default.id
+}
+
+resource "unifi_wlan" "iot" {
+  name       = var.iot_wifi_ssid
+  passphrase = var.iot_wifi_password
+  security   = "wpapsk"
+
+  enhanced_iot = true
+  enabled      = true
+
+  network_id    = unifi_network.iot_vlan.id
   user_group_id = data.unifi_client_qos_rate.default.id
 }
