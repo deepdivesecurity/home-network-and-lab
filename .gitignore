@@ -465,3 +465,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+AGENTS.md
+CLAUDE.md
