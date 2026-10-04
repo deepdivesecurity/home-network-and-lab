@@ -20,12 +20,12 @@ repos:
       - id: terraform_docs
         files: ^ubiquiti/.*\.(tf|tfvars)$
         args:
-          - --hook-config=--path-to-file=UBIQUITI_DOCS.md
+          - --hook-config=--path-to-file=README.md
           - --hook-config=--add-to-existing-file=true
           - --hook-config=--create-file-if-not-exist=true
       - id: terraform_docs
         files: ^proxmox/.*\.(tf|tfvars)$
         args:
-          - --hook-config=--path-to-file=PROXMOX_DOCS.md
+          - --hook-config=--path-to-file=README.md
           - --hook-config=--add-to-existing-file=true
           - --hook-config=--create-file-if-not-exist=true
