@@ -8,18 +8,24 @@ repos:
     rev: 253d99053f80e4a368175e93b36edb662e7e5135 # v1.109.1
     hooks:
       - id: terraform_fmt
-        files: ^ubiquiti/.*\.(tf|tfvars)$
+        files: &terraform_files \.(tf|tfvars)(\.json)?$
       - id: terraform_tflint
-        files: ^ubiquiti/.*\.(tf|tfvars)$
+        files: *terraform_files
       - id: terraform_validate
-        files: ^ubiquiti/.*\.(tf|tfvars)$
+        files: *terraform_files
       - id: terraform_trivy
-        files: ^ubiquiti/.*\.(tf|tfvars)$
+        files: *terraform_files
       - id: terraform_checkov
-        files: ^ubiquiti/.*\.(tf|tfvars)$
+        files: *terraform_files
       - id: terraform_docs
         files: ^ubiquiti/.*\.(tf|tfvars)$
         args:
           - --hook-config=--path-to-file=UBIQUITI_DOCS.md
+          - --hook-config=--add-to-existing-file=true
+          - --hook-config=--create-file-if-not-exist=true
+      - id: terraform_docs
+        files: ^proxmox/.*\.(tf|tfvars)$
+        args:
+          - --hook-config=--path-to-file=PROXMOX_DOCS.md
           - --hook-config=--add-to-existing-file=true
           - --hook-config=--create-file-if-not-exist=true
